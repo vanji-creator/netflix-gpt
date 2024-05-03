@@ -1,11 +1,7 @@
-import "./App.css";
+import Body from "./components/Body";
 
 function App() {
-  return (
-    <div className="App text-blue-800 text-3xl font-bold">
-      <h1>Vanakam</h1>
-    </div>
-  );
+  return <Body />;
 }
 
 export default App;
