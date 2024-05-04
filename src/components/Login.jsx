@@ -21,22 +21,29 @@ const Login = () => {
         <h1 className="font-bold text-3xl py-4 ">
           {isSignInForm ? <>Sign In</> : <>Sign Up</>}
         </h1>
-        {isSignInForm ? null : (
+        {/* {isSignInForm ? null : (
           <input
             type="text"
             placeholder="Name"
-            className="p-4 bg-gray-600 bg-opacity-40 border border-white my-4 w-full rounded-md"
+            className="p-4 bg-gray-600 bg-opacity-20 border border-white my-4 w-full rounded-md"
+          />
+        )} */}
+        {!isSignInForm && (
+          <input
+            type="text"
+            placeholder="Name"
+            className="p-4 bg-gray-600 bg-opacity-20 border border-white my-4 w-full rounded-md"
           />
         )}
         <input
           type="text"
           placeholder="Email or mobile number"
-          className="p-4 bg-gray-600 bg-opacity-40 border border-white my-4 w-full rounded-md"
+          className="p-4 bg-gray-600 bg-opacity-20 border border-white my-4 w-full rounded-md"
         />
         <input
           type="password"
           placeholder="Password"
-          className="p-4 bg-gray-600 bg-opacity-40 border border-white my-4 w-full rounded-md"
+          className="p-4 bg-gray-600 bg-opacity-20 border border-white my-4 w-full rounded-md"
         />
         <button className="w-full bg-red-700 p-2 my-6 rounded-md">
           {isSignInForm ? "Sign In" : "Sign up"}
