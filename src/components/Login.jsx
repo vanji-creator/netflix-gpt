@@ -7,16 +7,25 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { updateProfile } from "firebase/auth";
+import { useDispatch } from "react-redux";
+// import { addUser } from "../utils/userSlice";
+import Navigator from "./Navigator";
+import { BACKGROUND_IMAGE } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [validationResult, setValidationResult] = useState("");
   const email = useRef(null);
   const password = useRef(null);
+  const name = useRef(null);
+
+  // const dispatch = useDispatch();
 
   const handleButtonClick = () => {
     const emailValue = email.current.value;
     const passwordValue = password.current.value;
+
     //validation logic
     const message = validateData(emailValue, passwordValue);
     setValidationResult(message);
@@ -28,6 +37,18 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL: "https://example.com/jane-q-user/profile.jpg",
+          })
+            .then(() => {
+              // Profile updated!
+              // const { uid, email, displayName } = auth.currentUser;
+              // dispatch(
+              //   addUser({ uid: uid, email: email, displayName: displayName })
+              // );
+            })
+            .catch((error) => {});
 
           // ...
         })
@@ -42,8 +63,6 @@ const Login = () => {
       signInWithEmailAndPassword(auth, emailValue, passwordValue)
         .then((userCredential) => {
           // Signed in
-          const user = userCredential.user;
-          console.log(user);
           // ...
         })
         .catch((error) => {
@@ -59,13 +78,10 @@ const Login = () => {
   };
   return (
     <div>
+      <Navigator />
       <Header />
       <div className="absolute bg-black">
-        <img
-          className="opacity-40 "
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/4d7bb476-6d8b-4c49-a8c3-7739fddd135c/deecf71d-7a47-4739-9e1a-31b6b0d55be7/IN-en-20240429-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-          alt="background "
-        />
+        <img className="opacity-40 " src={BACKGROUND_IMAGE} alt="background " />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
@@ -84,6 +100,7 @@ const Login = () => {
 
         {!isSignInForm && (
           <input
+            ref={name}
             type="text"
             placeholder="Name"
             className="p-4 bg-gray-600 bg-opacity-20 border border-white my-4 w-full rounded-md"
