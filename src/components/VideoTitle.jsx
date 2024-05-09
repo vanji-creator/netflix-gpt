@@ -3,7 +3,7 @@ import "../utils/playIcon.svg";
 
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className="pt-[25%] px-24 absolute text-white bg-gradient-to-tr from-black w-screen aspect-video">
+    <div className="pt-[25%] px-24 absolute text-white bg-gradient-to-tr from-black w-screen aspect-video z-10">
       <h1 className="text-4xl font-bold py-2">{title}</h1>
       <p className="text-lg w-1/3">{overview}</p>
       <div className="">

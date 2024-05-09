@@ -7,13 +7,13 @@ const VideoBackground = ({ movieId }) => {
  
   return (
     <div
-      className="w-screen "
+      className="w-screen"
       // className="relative w-screen h-screen"
     >
       <iframe
-        className="w-screen aspect-video absolute -z-10 -inset-y-10"
-        // className="max-w-full max-h-full bottom-0 left-0 m-auto overflow-auto fixed right-0 top-0 object-contain"
-        // className="absolute inset-0 w-full h-full object-cover"
+        className="w-screen aspect-video "
+        // className="w-screen aspect-video relative align-top -z-10 -inset-y-10"
+
         src={
           "https://www.youtube.com/embed/" +
           trailerStore +
