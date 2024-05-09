@@ -81,7 +81,7 @@ const Login = () => {
       <Navigator />
       <Header />
       <div className="absolute bg-black">
-        <img className="opacity-40 " src={BACKGROUND_IMAGE} alt="background " />
+        <img className="opacity-70 " src={BACKGROUND_IMAGE} alt="background " />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}

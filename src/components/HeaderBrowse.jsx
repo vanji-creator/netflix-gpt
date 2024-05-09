@@ -14,15 +14,17 @@ const HeaderBrowse = () => {
       });
   };
   return (
-    <div className="absolute w-screen px-10 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
+    <div className="absolute w-screen top-0 px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
       <img className="w-32 " src={LOGO_URL} alt="logo" />
       <div className="flex ">
         <img
-          className="w-10 h-10 rounded-md m-2"
+          className="w-10 h-10 rounded-md m-2 "
           alt="user-icon"
           src={USER_ICON}
         />
-        <button onClick={handleSignOut}>Sign out</button>
+        <button className="text-white" onClick={handleSignOut}>
+          Sign out
+        </button>
       </div>
     </div>
   );

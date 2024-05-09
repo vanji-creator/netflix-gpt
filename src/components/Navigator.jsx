@@ -23,7 +23,7 @@ const Navigator = () => {
     return () => unsubscribe();
   }, []);
 
-  return true;
+  return <div className="absolute"></div>;
 };
 
 export default Navigator;
