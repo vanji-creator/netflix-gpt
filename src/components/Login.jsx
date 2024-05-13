@@ -8,7 +8,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { updateProfile } from "firebase/auth";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 // import { addUser } from "../utils/userSlice";
 import Navigator from "./Navigator";
 import { BACKGROUND_IMAGE } from "../utils/constants";
@@ -43,9 +43,9 @@ const Login = () => {
           })
             .then(() => {
               // Profile updated!
-              // const { uid, email, displayName } = auth.currentUser;
+              const { uid, email, displayName } = auth.currentUser;
               // dispatch(
-              //   addUser({ uid: uid, email: email, displayName: displayName })
+              // addUser({ uid: uid, email: email, displayName: displayName });
               // );
             })
             .catch((error) => {});
