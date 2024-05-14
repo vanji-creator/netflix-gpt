@@ -10,6 +10,7 @@ import { changeLanguage } from "../utils/configSlice";
 const HeaderBrowse = () => {
   const user = useSelector((store) => store.user);
   const language = useSelector((store) => store.config.language);
+  const showGpt = useSelector((store) => store.gpt.showGptSearch);
   const [backGroundColor, setBackGroundColor] = useState("bg-transparent");
   const dispatch = useDispatch();
 
@@ -55,7 +56,7 @@ const HeaderBrowse = () => {
       {user && (
         <div className="flex font-bold">
           <select
-            className="px-2 mt-2 rounded-lg h-10 text-md bg-transparent hover:text-slate-800  text-white cursor-pointer mr-2 w-28 text-center"
+            className="px-2 mt-2 rounded-lg h-10 text-md bg-transparent hover:text-slate-700  text-white cursor-pointer mr-2 w-28 text-center"
             onChange={handleLanguageChange}
           >
             {SUPPORTED_LANGUAGES.map((lang) => (
@@ -65,10 +66,12 @@ const HeaderBrowse = () => {
             ))}
           </select>
           <button
-            className="px-2 mt-2 rounded-lg h-10 text-md bg-transparent text-white hover:text-slate-800 cursor-pointer mr-2 w-28"
+            className="px-2 mt-2 rounded-lg h-10 text-md bg-transparent text-white hover:text-slate-800 cursor-pointer mr-2 w-auto "
             onClick={handleGptClick}
           >
-            {lang.header.gptSearchButton[language]}
+            {showGpt
+              ? lang.header.home[language]
+              : lang.header.gptSearchButton[language]}
           </button>
           {/* <img
             className="w-10 h-10 rounded-md mr-2 mt-2"

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../utils/playIcon.svg";
+
 
 const VideoTitle = ({ title, overview }) => {
   const [showOverView, setShowOverView] = useState(true);

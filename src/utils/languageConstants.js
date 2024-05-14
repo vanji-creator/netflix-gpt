@@ -10,6 +10,10 @@ const lang = {
     tamil: "திரைப்படத்தை விவரிக்க",
   },
   header: {
+    home: {
+      en: "Home",
+      tamil: "முகப்பு பக்கம்",
+    },
     gptSearchButton: {
       en: "GPT search",
       tamil: "GPT தேடல்",
@@ -17,6 +21,24 @@ const lang = {
     signOut: {
       en: "Sign out",
       tamil: "வெளியேறு",
+    },
+  },
+  categories: {
+    nowPlaying: {
+      en: "Now Playing",
+      tamil: "ஓடிக்கொண்டிருக்கும் திரைப்படங்கள்",
+    },
+    popular: {
+      en: "Popular",
+      tamil: "பிரபலமான திரைப்படங்கள்",
+    },
+    topRated: {
+      en: "Top Rated",
+      tamil: "சிறந்த தரமதிப்பீடு பெற்ற திரைப்படங்கள்",
+    },
+    upcoming: {
+      en: "Upcoming",
+      tamil: "வரவிருக்கும் திரைப்படங்கள்",
     },
   },
 };
