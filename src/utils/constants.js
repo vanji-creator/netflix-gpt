@@ -22,6 +22,3 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "en", name: "English" },
   { identifier: "tamil", name: "தமிழ்" },
 ];
-
-export const OPENAI_KEY =
-  "sk-proj-xwHgotf9W6mcCBUu1m8RT3BlbkFJcOehYMqX2yPQG7xgrL4q";
