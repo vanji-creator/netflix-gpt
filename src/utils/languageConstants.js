@@ -5,7 +5,7 @@ const lang = {
     en: "Search",
     tamil: "தேடு",
   },
-  gptPlaceholder: {
+  geminiPlaceholder: {
     en: "Let me cook the best movie suggestions",
     tamil: "திரைப்படத்தை விவரிக்க",
   },

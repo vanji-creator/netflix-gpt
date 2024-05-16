@@ -71,7 +71,7 @@ const HeaderBrowse = () => {
           >
             {showGpt
               ? lang.header.home[language]
-              : lang.header.gptSearchButton[language]}
+              : lang.header.geminiSearchButton[language]}
           </button>
           {/* <img
             className="w-10 h-10 rounded-md mr-2 mt-2"

@@ -6,7 +6,7 @@ import HeaderBrowse from "./HeaderBrowse";
 import MainContainer from "./MainContainer";
 import Navigator from "./Navigator";
 import SecondaryContainer from "./SecondaryContainer";
-import GptSearch from "./GptPage";
+import GeminiSearch from "./GeminiPage";
 import { useSelector } from "react-redux";
 
 const Browse = () => {
@@ -20,7 +20,7 @@ const Browse = () => {
       <Navigator />
       <HeaderBrowse />
       {showGptSearch ? (
-        <GptSearch />
+        <GeminiSearch />
       ) : (
         <>
           <MainContainer />

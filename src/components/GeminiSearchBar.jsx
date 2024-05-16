@@ -34,7 +34,7 @@ const GeminiSearchBar = () => {
           ref={searchText}
           type="text"
           className="p-2 m-4 border border-black w-96 rounded-lg h-12 text-md"
-          placeholder={lang.gptPlaceholder[language]}
+          placeholder={lang.geminiPlaceholder[language]}
         />
         <button
           className="py-2 px-8 mt-4 h-12  border border-red-600 bg-gradient-to-tr from-red-600 rounded-lg"
