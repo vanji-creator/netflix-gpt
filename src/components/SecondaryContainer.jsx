@@ -6,7 +6,7 @@ import lang from "../utils/languageConstants";
 const SecondaryContainer = () => {
   const movies = useSelector((store) => store.movies);
   const currentLanguage = useSelector((store) => store.config.language);
-  console.log(movies);
+
   return (
     <div className="bg-black">
       <div className="-mt-56 relative z-20 pl-12">

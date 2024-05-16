@@ -1,4 +1,4 @@
-import GptSearch from "../components/GptPage";
+import GptSearch from "../components/GeminiPage";
 
 const lang = {
   gptSearch: {
@@ -14,9 +14,9 @@ const lang = {
       en: "Home",
       tamil: "முகப்பு பக்கம்",
     },
-    gptSearchButton: {
-      en: "GPT search",
-      tamil: "GPT தேடல்",
+    geminiSearchButton: {
+      en: "Gemini search",
+      tamil: "Gemini தேடல்",
     },
     signOut: {
       en: "Sign out",

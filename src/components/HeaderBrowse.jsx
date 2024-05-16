@@ -26,7 +26,7 @@ const HeaderBrowse = () => {
 
   const handleGptClick = () => {
     //toggle gpt search component
-    console.log("gpt clicked");
+
     dispatch(toggleGptView());
   };
 
