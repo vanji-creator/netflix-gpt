@@ -11,7 +11,7 @@ const VideoBackground = ({ movieId }) => {
       // className="relative w-screen h-screen"
     >
       <iframe
-        className="w-screen aspect-video -mt-40"
+        className="w-screen aspect-video -mt-48"
         // className="w-screen aspect-video relative align-top -z-10 -inset-y-10"
 
         src={
