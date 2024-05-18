@@ -82,7 +82,7 @@ const Login = () => {
       <Header />
       <div className="absolute bg-black">
         <img
-          className="opacity-70 h-screen object-cover"
+          className="opacity-70 h-screen md:h-auto object-cover"
           src={BACKGROUND_IMAGE}
           alt="background "
         />
