@@ -10,7 +10,9 @@ import GeminiSearch from "./GeminiPage";
 import { useSelector } from "react-redux";
 
 const Browse = () => {
-  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+  const showGeminiSearch = useSelector(
+    (store) => store.gemini.showGeminiSearch
+  );
   useNowPlayingMovies();
   usePopularMovies();
   useTopRatedMovies();
@@ -19,7 +21,7 @@ const Browse = () => {
     <div className="scrollbar-hide ">
       <Navigator />
       <HeaderBrowse />
-      {showGptSearch ? (
+      {showGeminiSearch ? (
         <GeminiSearch />
       ) : (
         <>

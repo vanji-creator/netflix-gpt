@@ -1,12 +1,10 @@
-import GptSearch from "../components/GeminiPage";
-
 const lang = {
   gptSearch: {
     en: "Search",
     tamil: "தேடு",
   },
   geminiPlaceholder: {
-    en: "Let me cook the best movie suggestions",
+    en: "nolan movies",
     tamil: "திரைப்படத்தை விவரிக்க",
   },
   header: {

@@ -11,10 +11,11 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMmUyNzI0OTU1ZWJkMWY3YWZmOTZlNWFjNzZlZDk5YyIsInN1YiI6IjY2MzljYzRlY2MyNzdjMDEyNjI0ODkyOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QwTFU4IoLuBvD41ppuBh9gWtehusTgMtP5E9eijpBVA",
+    Authorization: `Bearer ${process.env.REACT_APP_TMDB_KEY}`,
   },
 };
+
+
 
 export const POSTER_CDN = "https://image.tmdb.org/t/p/w500/";
 
