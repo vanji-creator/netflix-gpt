@@ -12,6 +12,7 @@ import { updateProfile } from "firebase/auth";
 // import { addUser } from "../utils/userSlice";
 import Navigator from "./Navigator";
 import { BACKGROUND_IMAGE } from "../utils/constants";
+import Contact from "./Contact";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -77,10 +78,10 @@ const Login = () => {
     setIsSignInForm(!isSignInForm);
   };
   return (
-    <div>
+    <div className="flex flex-col">
       <Navigator />
       <Header />
-      <div className="absolute bg-black">
+      <div className=" bg-black">
         <img
           className="opacity-70 h-screen md:h-auto object-cover"
           src={BACKGROUND_IMAGE}
@@ -137,6 +138,8 @@ const Login = () => {
             : "Already have an account? Sign In."}
         </p>
       </form>
+
+      <Contact />
     </div>
   );
 };

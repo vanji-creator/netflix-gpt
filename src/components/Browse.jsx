@@ -9,6 +9,7 @@ import SecondaryContainer from "./SecondaryContainer";
 import GeminiSearch from "./GeminiPage";
 import { useSelector } from "react-redux";
 
+
 const Browse = () => {
   const showGeminiSearch = useSelector(
     (store) => store.gemini.showGeminiSearch

@@ -2,6 +2,7 @@ import React from "react";
 import MovieList from "./MovieList";
 import { useSelector } from "react-redux";
 import lang from "../utils/languageConstants";
+import Contact from "./Contact";
 
 const SecondaryContainer = () => {
   const movies = useSelector((store) => store.movies);
@@ -9,7 +10,7 @@ const SecondaryContainer = () => {
 
   return (
     <div className="bg-black">
-      <div className="md:-mt-56 relative z-20 pl-12">
+      <div className="md:-mt-56 relative z-20 ">
         <MovieList
           category={lang.categories.nowPlaying[currentLanguage]}
           movies={movies.nowPlayingMovies}
@@ -26,6 +27,7 @@ const SecondaryContainer = () => {
           category={lang.categories.upcoming[currentLanguage]}
           movies={movies.upcomingMovies}
         />
+        <Contact />
       </div>
     </div>
   );

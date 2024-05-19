@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import MovieList from "./MovieList";
+import Contact from "./Contact";
 
 const GeminiSuggestions = () => {
   const { geminiResults, allMovies, geminiMovies } = useSelector(
@@ -8,8 +9,8 @@ const GeminiSuggestions = () => {
   );
   if (!geminiResults) return null;
   return (
-    <div className="">
-      <div className="bg-black">
+    <div className="flex flex-col">
+      <div className="bg-black min-h-screen flex-grow">
         {allMovies.map((movieList, index) => (
           <MovieList
             key={index}
@@ -27,6 +28,7 @@ const GeminiSuggestions = () => {
           />
         ))}
       </span> */}
+      <Contact />
     </div>
   );
 };
