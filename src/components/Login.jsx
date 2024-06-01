@@ -132,9 +132,11 @@ const Login = () => {
         >
           {isSignInForm ? "Sign In" : "Sign up"}
         </button>
+        <p>Do not use your Netflix Credentials,create a dummy account</p>
+        <br />
         <p onClick={toggleSignIn} className="cursor-pointer">
           {isSignInForm
-            ? "New to NetflixGPT? Sign up now."
+            ? "New to NetflixGemini? Sign up now."
             : "Already have an account? Sign In."}
         </p>
       </form>
